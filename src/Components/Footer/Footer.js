@@ -17,10 +17,7 @@ const Footer = () => {
         <Link href="https://github.com/Suleyman1406" target="_blank">
           <AiFillGithub className={Styles.icon} />
         </Link>
-        <Link
-          href="https://www.linkedin.com/in/suleyman-dadashov-54136a178/"
-          target="_blank"
-        >
+        <Link href="https://www.linkedin.com/in/dadashow/" target="_blank">
           <AiFillLinkedin className={Styles.icon} />
         </Link>
         <Link href="https://www.instagram.com/suleyman._.14/" target="_blank">
@@ -41,7 +38,7 @@ const Footer = () => {
         >
           <AiFillCode className={Styles.icon} />
         </Link>
-        <Text href="https://dadashow.netlify.app/">
+        <Text href="https://dadashow.me/">
           Designed & Built by <br />{" "}
           <span style={{ fontSize: "1rem" }}>Suleyman Dadashov</span>
         </Text>
