@@ -1,9 +1,7 @@
-import React from "react";
-import { Link as LinkR } from "react-router-dom";
 import styled from "styled-components";
-import { useBMI } from "../Context/BMIContext";
+import { Link as LinkR } from "react-router-dom";
 
-const Container = styled.div`
+export const Container = styled.div`
   height: 70px;
   width: 100%;
   background-color: #81d4fa;
@@ -16,7 +14,7 @@ const Container = styled.div`
   }
 `;
 
-const Logo = styled.h1`
+export const Logo = styled.h1`
   font-family: "Dancing Script", cursive;
   transform: translateY(5px);
   margin-left: 20px;
@@ -28,7 +26,7 @@ const Logo = styled.h1`
   }
 `;
 
-const LogoImage = styled.img`
+export const LogoImage = styled.img`
   width: 45px;
   margin-left: 10px;
   display: none;
@@ -40,12 +38,12 @@ const LogoImage = styled.img`
   }
 `;
 
-const Links = styled.div`
+export const Links = styled.div`
   margin-left: auto;
   margin-right: 20px;
 `;
 
-const Link = styled(LinkR)`
+export const Link = styled(LinkR)`
   color: white;
   font-family: "Dancing Script", cursive;
   font-size: 24px;
@@ -77,28 +75,3 @@ const Link = styled(LinkR)`
     font-size: 16px;
   }
 `;
-
-const Navbar = () => {
-  const { setHasResult } = useBMI();
-  return (
-    <Container>
-      <LinkR onClick={() => setHasResult(false)} to="/">
-        <Logo>Dada Calculate</Logo>
-        <LogoImage src="images/logo.png" />
-      </LinkR>
-      <Links>
-        <Link onClick={() => setHasResult(false)} to="/">
-          Calculate BMI
-        </Link>
-        <Link onClick={() => setHasResult(false)} to="/about">
-          What's the BMI?
-        </Link>
-        <Link onClick={() => setHasResult(false)} to="/history">
-          BMI History
-        </Link>
-      </Links>
-    </Container>
-  );
-};
-
-export default Navbar;

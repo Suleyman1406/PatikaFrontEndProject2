@@ -3,10 +3,10 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Components/Home";
+import Home from "./Components/Home/Home";
 import { BMIProvider } from "./Context/BMIContext";
-import About from "./Components/About";
-import History from "./Components/History";
+import About from "./Components/About/About";
+import History from "./Components/History/History";
 ReactDOM.render(
   <BMIProvider>
     <BrowserRouter>

@@ -1,4 +1,4 @@
-export const dietList = {
+export const data = {
   underWeight: {
     breakfast: [
       "2 egg brown bread sandwich",

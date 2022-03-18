@@ -1,7 +1,5 @@
-import React from "react";
 import styled from "styled-components";
-
-const Container = styled.div`
+export const Container = styled.div`
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -24,7 +22,7 @@ const Container = styled.div`
   }
 `;
 
-const Image = styled.img`
+export const Image = styled.img`
   width: 600px;
   float: left;
   @media only screen and (max-width: 1350px) {
@@ -39,7 +37,7 @@ const Image = styled.img`
   }
 `;
 
-const Content = styled.div`
+export const Content = styled.div`
   width: calc(100% - 600px);
   float: left;
   padding: 20px 25px;
@@ -68,7 +66,7 @@ const Content = styled.div`
   }
 `;
 
-const Table = styled.table`
+export const Table = styled.table`
   width: 100%;
   border: 1px solid rgba(245, 198, 94);
   text-align: center;
@@ -80,7 +78,7 @@ const Table = styled.table`
   }
 `;
 
-const Tr = styled.tr`
+export const Tr = styled.tr`
   transition: 0.2s all;
   &:nth-child(even) {
     background-color: rgba(180, 180, 180, 0.5);
@@ -90,7 +88,7 @@ const Tr = styled.tr`
   }
 `;
 
-const THead = styled.th`
+export const THead = styled.th`
   text-align: center;
   padding: 7px;
   background-color: rgba(120, 120, 120);
@@ -106,7 +104,7 @@ const THead = styled.th`
   }
 `;
 
-const TData = styled.td`
+export const TData = styled.td`
   text-align: center;
   padding: 10px;
   @media only screen and (max-width: 650px) {
@@ -116,35 +114,3 @@ const TData = styled.td`
     font-size: 12px;
   }
 `;
-
-const History = () => {
-  const arr = JSON.parse(localStorage.getItem("BMIhistory")) || [];
-  console.log(arr);
-  return (
-    <Container className="clearfix">
-      <Image src="images/history.jpg" />
-      <Content>
-        <Table>
-          <thead>
-            <Tr>
-              <THead>Name</THead>
-              <THead>BMI</THead>
-              <THead>Result</THead>
-            </Tr>
-          </thead>
-          <tbody>
-            {arr.map((item, i) => (
-              <Tr key={i}>
-                <TData>{item.name}</TData>
-                <TData>{item.bmi}</TData>
-                <TData>{item.res}</TData>
-              </Tr>
-            ))}
-          </tbody>
-        </Table>
-      </Content>
-    </Container>
-  );
-};
-
-export default History;
